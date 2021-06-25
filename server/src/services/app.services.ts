@@ -5,7 +5,7 @@ import WordModel, { IWord } from '@models/Word.model';
 
 class AppServices {
   public async getWords() {
-    return await WordModel.find().populate('group');
+    return await WordModel.find().sort({ date: -1 }).populate('group');
   }
 
   public async insertWord(data: WordData) {
