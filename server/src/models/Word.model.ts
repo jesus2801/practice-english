@@ -25,7 +25,7 @@ const wordSchema = new Schema({
   date: {
     type: Number,
     required: [true, 'code:required'],
-    default: Date.now(),
+    default: Date.now,
   },
 });
 
