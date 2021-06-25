@@ -1,7 +1,10 @@
+import Home from '@components/home/Home';
+import Layout from '@components/Layout';
+
 const IndexPage = () => (
-  <div>
-    <h1>Hello Next.js 👋</h1>
-  </div>
+  <Layout title="Home">
+    <Home />
+  </Layout>
 );
 
 export default IndexPage;
