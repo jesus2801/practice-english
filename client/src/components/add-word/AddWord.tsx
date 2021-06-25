@@ -62,8 +62,8 @@ const AddWord = () => {
       handleLoading(false);
 
       Swal.fire('Done!', 'The word was added correctly', 'success');
-      setSpanish([]);
-      setEnglish([]);
+      setSpanish(['']);
+      setEnglish(['']);
     } catch (e) {
       showErr('An error ocurred');
     }

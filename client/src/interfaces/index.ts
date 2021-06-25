@@ -3,3 +3,11 @@ export interface Group {
   name: string;
   date: number;
 }
+
+export interface Word {
+  _id: string;
+  spanish: string[];
+  english: string[];
+  group: Group;
+  date: number;
+}

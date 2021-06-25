@@ -1,7 +1,9 @@
 import { DetailedHTMLProps, MutableRefObject, ReactNode } from 'react';
 
+import { Word } from '.';
+
 export interface TableRowProps {
-  data: { [k: string]: string | number }[];
+  data: Word[];
   index: number;
   style: any;
 }
