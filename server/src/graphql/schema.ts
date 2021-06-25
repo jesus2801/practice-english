@@ -3,10 +3,12 @@ import gql from 'graphql-tag';
 export default gql`
   type Query {
     getWords: [Word!]!
+    getGroups: [Group!]!
   }
 
   type Mutation {
     insertWord(word: WordInput): ID!
+    insertGroup(name: String!): ID!
   }
 
   input WordInput {
@@ -24,6 +26,7 @@ export default gql`
   }
 
   type Group {
+    _id: ID!
     name: String!
     date: Float!
   }

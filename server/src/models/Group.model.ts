@@ -1,5 +1,4 @@
 import { Schema, model, Document } from 'mongoose';
-import { IModel } from '@interfaces';
 
 export interface IGroup extends Document {
   name: string;
@@ -19,4 +18,4 @@ const groupSchema = new Schema({
   },
 });
 
-export default model<IGroup>('Group', groupSchema) as IModel<IGroup>;
+export default model<IGroup>('Group', groupSchema);

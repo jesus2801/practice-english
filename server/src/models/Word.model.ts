@@ -1,5 +1,4 @@
 import { Schema, model, Document, Types } from 'mongoose';
-import { IModel } from '@interfaces';
 
 export interface IWord extends Document {
   spanish: string[];
