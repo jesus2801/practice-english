@@ -11,3 +11,9 @@ export const ADD_GROUP = gql`
     insertGroup(name: $name)
   }
 `;
+
+export const DELETE_WORD = gql`
+  mutation DeleteWord($_id: ID!) {
+    deleteWord(_id: $_id)
+  }
+`;
