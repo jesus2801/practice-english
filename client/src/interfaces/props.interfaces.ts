@@ -29,3 +29,14 @@ export interface InputProps
   icon?: ReactNode;
   addRef?: MutableRefObject<HTMLInputElement | null>;
 }
+
+export interface ModeButtonProps {
+  hookFn: (state: 'normal' | 'test') => void;
+  mode: 'normal' | 'test';
+  setSelectedGroup: (state: null | string) => void;
+}
+
+export interface TestProps {
+  selectedGroup: null | string;
+  setMode: (state: 'normal' | 'test') => void;
+}
