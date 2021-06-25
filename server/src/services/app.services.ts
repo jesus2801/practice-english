@@ -27,7 +27,7 @@ class AppServices {
   }
 
   public async deleteWord(_id: string) {
-    await GroupModel.deleteOne({ _id });
+    await WordModel.deleteOne({ _id });
 
     return false;
   }
