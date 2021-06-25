@@ -9,9 +9,13 @@ export interface WordData {
 }
 
 export interface WordInput {
-  input: WordData;
+  word: WordData;
 }
 
 export interface GroupInput {
   name: string;
+}
+
+export interface DeleteWordInput {
+  _id: string;
 }

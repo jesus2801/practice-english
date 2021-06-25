@@ -9,6 +9,7 @@ export default gql`
   type Mutation {
     insertWord(word: WordInput): ID!
     insertGroup(name: String!): ID!
+    deleteWord(_id: ID!): Boolean
   }
 
   input WordInput {

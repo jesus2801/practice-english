@@ -1,11 +1,11 @@
-import { WordData } from '@interfaces';
+import WordModel, { IWord } from '@models/Word.model';
 import GroupModel from '@models/Group.model';
 
-import WordModel, { IWord } from '@models/Word.model';
+import { WordData } from '@interfaces';
 
 class AppServices {
   public async getWords() {
-    return await WordModel.find().sort({ date: -1 }).populate('group');
+    return await WordModel.find().populate('group').sort({ date: -1 });
   }
 
   public async insertWord(data: WordData) {
@@ -24,6 +24,12 @@ class AppServices {
     await group.save();
 
     return group._id;
+  }
+
+  public async deleteWord(_id: string) {
+    await GroupModel.deleteOne({ _id });
+
+    return false;
   }
 }
 
