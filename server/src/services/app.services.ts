@@ -4,8 +4,10 @@ import GroupModel from '@models/Group.model';
 import { WordData } from '@interfaces';
 
 class AppServices {
-  public async getWords() {
-    return await WordModel.find().populate('group').sort({ date: -1 });
+  public async getWords(group?: string) {
+    if (group)
+      return await WordModel.find({ group }).populate('group').sort({ date: -1 });
+    else return await WordModel.find().populate('group').sort({ date: -1 });
   }
 
   public async insertWord(data: WordData) {

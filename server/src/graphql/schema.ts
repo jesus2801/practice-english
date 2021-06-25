@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 export default gql`
   type Query {
-    getWords: [Word!]!
+    getWords(group: ID): [Word!]!
     getGroups: [Group!]!
   }
 

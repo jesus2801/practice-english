@@ -1,11 +1,11 @@
 import appServices from '@services/app.services';
 
-import { WordInput, GroupInput, DeleteWordInput } from '@interfaces';
+import { WordInput, GroupInput, DeleteWordInput, getWordsInput } from '@interfaces';
 
 export default {
   Query: {
-    async getWords() {
-      return await appServices.getWords();
+    async getWords({}, { group }: getWordsInput) {
+      return await appServices.getWords(group);
     },
 
     async getGroups() {

@@ -8,6 +8,10 @@ export interface WordData {
   group: string;
 }
 
+export interface getWordsInput {
+  group?: string;
+}
+
 export interface WordInput {
   word: WordData;
 }
