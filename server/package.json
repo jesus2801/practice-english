@@ -1,0 +1,53 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src",
+      "schema"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ./src/index.ts",
+    "ext": "ts, graphql"
+  },
+  "scripts": {
+    "prestart": "npm install --production",
+    "start": "node dist/index.js",
+    "start:dev": "node dist/index.js",
+    "dev": "nodemon",
+    "postbuild": "tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "build": "tsc",
+    "indent": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.18.0",
+    "fastify-cors": "^6.0.1",
+    "fastify-helmet": "^5.3.1",
+    "graphql": "^15.5.1",
+    "graphql-tag": "^2.12.4",
+    "graphql-tools": "^7.0.5",
+    "mercurius": "^7.9.1",
+    "mongoose": "^5.12.14",
+    "path": "^0.12.7",
+    "winston": "^3.3.3"
+  }
+}

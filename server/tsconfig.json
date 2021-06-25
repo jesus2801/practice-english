@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["../*"],
+      "@config/*": ["config/*"],
+      "@config": ["config/index"],
+      "@interfaces/*": ["interfaces/*"],
+      "@interfaces": ["interfaces/index"],
+      "@utils/*": ["utils/*"],
+      "@utils": ["utils/index"],
+      "@graphql/*": ["graphql/*"],
+      "@services/*": ["services/*"],
+      "@models/*": ["models/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
+}
